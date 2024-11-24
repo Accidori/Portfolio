@@ -1,52 +1,34 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
+//page wrappers
+import Header from './components/Header'
+import Footer from './components/Footer'
 
+//Routes
+import About from './components/About'
+import Contact from './components/Contact'
+import Portfolio from './components/Portfolio'
+import Resume from './components/Resume'
+
+
+
+//this cool thing
+const App:React.FC = () => {
   return (
-    <html lang="en">
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path = "/" element = {<About />} />
+          <Route path = "/portfolio" element = {<Portfolio />} />
+          <Route path = "/resume" element = {<Resume />} />
+          <Route path = "/contact" element = {<Contact />} />
+        </Routes>
+        <Footer/>
+      </Router>
 
-    <head>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>My Portfolio</title>
-    </head> 
-    
-
-    <header>
-      <h1>Rita</h1>
-
-      <nav>
-        <ul>
-          <li>
-            <h2>About Me</h2>
-          </li>
-          <li>
-            <h2>Portfolio</h2>
-          </li>
-          <li>
-            <h2>Contact</h2>
-          </li>
-          <li>
-            <h2>Resume</h2>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <body>
-      <h1>About me</h1>
-      <p>Sample text</p>
-    </body>
-
-    <></>
-
-    <footer>
-      <p>© 2024 Rita</p>
-        </footer>
-    </html>
-  )
-}
+  );
+};
 
 export default App;
