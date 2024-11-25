@@ -14,7 +14,7 @@ const projects: Project[] = [
     },
     {
         title: 'Vechicle Builder',
-        description: '',
+        description: 'A web application that allows the user to build a custom vehicle and interact with them.',
         link: 'https://github.com/Accidori/Vehicle-builder'
     },
     {
@@ -31,7 +31,6 @@ const Portfolio: React.FC = () => {
         <section className="portfolio">
             <h1>Portfolio</h1>
             <div className="projects">
-                //this should do this for each project in the array hopefully
                 {projects.map((project, index) => (
                     <div key={index} className="project">
                         <h2>{project.title}</h2>

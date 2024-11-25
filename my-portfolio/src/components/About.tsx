@@ -6,8 +6,8 @@ const About: React.FC = () => {
     return (
         <section>
             <h1>About Me</h1>
-            <p>Sample text!</p>
-            <p>Some more sample text!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam, facere voluptas quas magnam beatae? Harum laboriosam sunt quod quo necessitatibus ad ipsam itaque enim, nisi, iusto labore, sed voluptatum.</p>
+
         </section>
     );
 };
